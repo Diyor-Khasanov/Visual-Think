@@ -57,9 +57,9 @@ const App = () => {
 
   return (
     <div className="relative min-h-[600px] w-full bg-[#050714] text-white overflow-hidden flex flex-col items-center">
-      <div className="absolute inset-0 z-0">
-        <img src="../public/Vector.png" alt="" className='mt-80' />
-        <img src="../public/Vector (1).png" alt="" className='-mt-120' />
+      <div className="absolute inset-0 z-0 opacity-40">
+        <img src="/Vector.png" alt="" className='mt-80' />
+        <img src="/Vector (1).png" alt="" className='-mt-120' />
       </div>
 
       <nav className="fixed top-0 left-0 right-0 z-100 w-full bg-[#050714]/80 backdrop-blur-xl border-b border-white/5">
@@ -180,7 +180,7 @@ const App = () => {
             <h2 className="text-7xl font-light relative font-indie flex items-center justify-center gap-10">
               Pricing
               <div className='w-[170px]'>
-                <img src="../public/priceVector.png" alt="" className='' />
+                <img src="/priceVector.png" alt="" className='' />
               </div>
             </h2>
           </div>
@@ -256,7 +256,7 @@ const App = () => {
 
       <section className="py-32 px-6 flex flex-col items-center relative overflow-hidden text-white">
         <div className="relative mb-8 flex items-center justify-center gap-10">
-            <img src="../public/vectorAbout.png" alt="" className='w-[170px]' />
+            <img src="/vectorAbout.png" alt="" className='w-[170px]' />
 
           <h2 className="text-7xl font-indie font-light tracking-tight">About us</h2>
 
@@ -266,7 +266,6 @@ const App = () => {
           />
         </div>
 
-        {/* Content Text */}
         <div className="max-w-3xl w-full text-center space-y-8 mt-12">
           <div className="space-y-2">
             <p className="text-xl md:text-2xl text-gray-300">
