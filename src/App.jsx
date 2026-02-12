@@ -57,7 +57,7 @@ const App = () => {
 
   return (
     <div className="relative min-h-[600px] w-full bg-[#050714] text-white overflow-hidden flex flex-col items-center">
-      <div className="absolute inset-0 z-0 opacity-30">
+      <div className="absolute inset-0 z-0">
         <img src="../public/Vector.png" alt="" className='mt-80' />
         <img src="../public/Vector (1).png" alt="" className='-mt-120' />
       </div>
