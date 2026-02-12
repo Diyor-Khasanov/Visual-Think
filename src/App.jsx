@@ -4,8 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './App.css'
+import { Link } from 'react-router-dom';
 
 const App = () => {
+
   const steps = [
     {
       icon: <Palette className="text-indigo-400" size={24} />,
@@ -55,6 +57,7 @@ const App = () => {
     }
   ];
 
+
   return (
     <div className="relative min-h-[600px] w-full bg-[#050714] text-white overflow-hidden flex flex-col items-center">
       <div className="absolute inset-0 z-0 opacity-40">
@@ -67,18 +70,18 @@ const App = () => {
           <div className="text-3xl font-medium tracking-tight font-indie text-white">
             Visual think
           </div>
-          <div className="hidden md:flex space-x-10 text-lg text-gray-400">
-            <a href="#how" className="hover:text-white transition">How it works</a>
-            <a href="#pricing" className="hover:text-white transition">Pricing</a>
-            <a href="#about" className="hover:text-white transition">About Us</a>
-          </div>
+          <ul className="hidden md:flex space-x-10 text-lg text-gray-400">
+            <li className="hover:text-white transition cursor-pointer">How it works</li>
+            <li className="hover:text-white transition cursor-pointer">Pricing</li>
+            <li className="hover:text-white transition cursor-pointer">About Us</li>
+          </ul>
           <div className="flex items-center space-x-4">
-            <button className="px-5 py-2 text-sm text-gray-300 hover:text-white transition">
+            <Link to={'/login'} className="px-5 py-2 text-sm text-gray-300 hover:text-white transition">
               Log in
-            </button>
-            <button className="px-6 py-2 text-sm bg-indigo-600 text-white rounded-full font-medium hover:bg-indigo-500 shadow-lg shadow-indigo-500/30 transition active:scale-95">
+            </Link>
+            <Link to={'/register'} className="px-6 py-2 text-sm bg-indigo-600 text-white rounded-full font-medium hover:bg-indigo-500 shadow-lg shadow-indigo-500/30 transition active:scale-95">
               Start for free
-            </button>
+            </Link>
           </div>
         </div>
       </nav>
