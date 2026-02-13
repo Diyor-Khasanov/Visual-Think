@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import './App.css'
 import { Link } from 'react-router-dom';
+import Header from './components/Header';
 
 const App = () => {
 
@@ -61,30 +62,11 @@ const App = () => {
   return (
     <div className="relative min-h-[600px] w-full bg-[#050714] text-white overflow-hidden flex flex-col items-center">
       <div className="absolute inset-0 z-0 opacity-40">
-        <img src="/Vector.png" alt="" className='mt-80' />
-        <img src="/Vector (1).png" alt="" className='-mt-120' />
+        <img src="/Vector.png" alt="" className='hidden xl:mt-80 xl:block' />
+        <img src="/Vector (1).png" alt="" className='hidden xl:-mt-120 xl:block' />
       </div>
 
-      <nav className="fixed top-0 left-0 right-0 z-100 w-full bg-[#050714]/80 backdrop-blur-xl border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
-          <div className="text-3xl font-medium tracking-tight font-indie text-white">
-            Visual think
-          </div>
-          <ul className="hidden md:flex space-x-10 text-lg text-gray-400">
-            <li className="hover:text-white transition cursor-pointer">How it works</li>
-            <li className="hover:text-white transition cursor-pointer">Pricing</li>
-            <li className="hover:text-white transition cursor-pointer">About Us</li>
-          </ul>
-          <div className="flex items-center space-x-4">
-            <Link to={'/login'} className="px-5 py-2 text-sm text-gray-300 hover:text-white transition">
-              Log in
-            </Link>
-            <Link to={'/register'} className="px-6 py-2 text-sm bg-indigo-600 text-white rounded-full font-medium hover:bg-indigo-500 shadow-lg shadow-indigo-500/30 transition active:scale-95">
-              Start for free
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       <div className="relative z-10 flex flex-col items-center justify-center grow w-full px-4 text-center">
         <Sparkles className="absolute top-20 left-1/4 text-blue-400 opacity-60" size={12} />
@@ -278,7 +260,6 @@ const App = () => {
               Our goal make development
               <span className="text-indigo-400 italic ml-2 relative">
                 easier, fun and efficient.
-                {/* Decorative underline */}
                 <svg className="absolute -bottom-2 left-0 w-full h-2 opacity-60" viewBox="0 0 200 10">
                   <path d="M5 5 Q 100 12, 195 5" stroke="currentColor" fill="none" strokeWidth="2" strokeLinecap="round" />
                 </svg>

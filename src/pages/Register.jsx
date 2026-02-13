@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Eye, EyeOff } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -36,7 +36,7 @@ const Register = () => {
     <div className="flex min-h-screen bg-white">
       <div className="hidden lg:flex lg:w-1/2 bg-[#050714] text-white p-16 flex-col justify-between relative overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px]" />
-        <div className="z-10 text-2xl font-light tracking-tight">Visual think</div>
+        <Link to={'/'} className="z-10 text-3xl font-light tracking-tight font-indie">Visual think</Link>
         <div className="z-10 space-y-6">
           <h1 className="text-6xl font-medium leading-tight">Welcome to <br /><span className="text-indigo-500">visual think</span></h1>
           <p className="text-gray-400 text-xl max-w-md">Our goal make development easier, fun and efficient.</p>

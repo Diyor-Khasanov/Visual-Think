@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Eye, EyeOff } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import '../App.css'
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -36,7 +37,7 @@ const Login = () => {
     <div className="flex min-h-screen bg-white">
       <div className="hidden lg:flex lg:w-1/2 bg-[#050714] text-white p-16 flex-col justify-between relative overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px]" />
-        <div className="z-10 text-2xl font-light tracking-tight">Visual think</div>
+        <Link to={'/'} className="z-10 text-3xl font-light tracking-tight font-indie">Visual think</Link>
         <div className="z-10 space-y-6">
           <h1 className="text-6xl font-medium leading-tight">Welcome to <br /><span className="text-indigo-500">Visual think</span></h1>
           <p className="text-gray-400 text-xl max-w-md">Our goal make development easier, fun and efficient.</p>
@@ -47,18 +48,18 @@ const Login = () => {
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8 md:p-16">
         <div className="w-full max-w-md space-y-8">
           <div className="text-center">
-            <h2 className="text-3xl font-semibold text-gray-900 mb-2">Log in</h2>
+            <h2 className="text-3xl font-semibold text-gray-900 mb-2">Log In</h2>
             <p className="text-gray-500 text-sm">Don't have an account? <a href="/register" className="text-indigo-600 hover:underline">Sign up</a></p>
           </div>
 
           <div className="space-y-3">
             <button type="button" onClick={() => handleSocialLogin('Facebook')} className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-full hover:bg-gray-50 transition-all active:scale-[0.98]">
               <img src="https://www.svgrepo.com/show/475647/facebook-color.svg" className="h-5 w-5" alt="FB" />
-              <span className="text-gray-700 font-medium">Log in with Facebook</span>
+              <span className="text-gray-700 font-medium">Log In with Facebook</span>
             </button>
             <button type="button" onClick={() => handleSocialLogin('Google')} className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-full hover:bg-gray-50 transition-all active:scale-[0.98]">
               <img src="https://www.svgrepo.com/show/475656/google-color.svg" className="h-5 w-5" alt="G" />
-              <span className="text-gray-700 font-medium">Log in with Google</span>
+              <span className="text-gray-700 font-medium">Log In with Google</span>
             </button>
           </div>
 
@@ -87,7 +88,7 @@ const Login = () => {
               <div className="text-right mt-2"><a href="/forgot-password" className="text-xs text-gray-400 hover:text-indigo-600">Forgot your password?</a></div>
             </div>
 
-            <button type="submit" className="w-full py-4 bg-[#5E5CE6] text-white rounded-xl font-bold text-lg hover:bg-indigo-700 shadow-lg transition-all active:scale-[0.98]">Log in</button>
+            <button type="submit" className="w-full py-4 bg-[#5E5CE6] text-white rounded-xl font-bold text-lg hover:bg-indigo-700 shadow-lg transition-all active:scale-[0.98]">Log In</button>
           </form>
         </div>
       </div>
