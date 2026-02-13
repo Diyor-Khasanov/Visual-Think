@@ -95,21 +95,27 @@ const App = () => {
           </div>
         </div>
 
-        <div className="w-full max-w-2xl bg-white rounded-full p-1.5 flex items-center shadow-2xl shadow-indigo-500/20 mt-28 mb-12">
+        <div className="w-full max-w-2xl bg-white rounded-2xl sm:rounded-full p-1.5 flex flex-col sm:flex-row items-center shadow-2xl shadow-indigo-500/20 mt-20 md:mt-28 mb-12">
+          {/* Input Area */}
           <input
             type="text"
-            placeholder="Compose your dream startup here..."
-            className="grow bg-transparent px-6 py-3 text-gray-800 outline-none placeholder-gray-400"
+            placeholder="Compose your dream startup..."
+            className="w-full sm:grow bg-transparent px-4 sm:px-6 py-3 text-gray-800 outline-none placeholder-gray-400 text-sm sm:text-base"
           />
-          <div className="flex items-center space-x-2 px-2">
-            <button className="p-2.5 text-indigo-600 bg-indigo-50 rounded-full hover:bg-indigo-100 transition">
-              <Upload size={20} />
-            </button>
-            <button className="p-2.5 text-indigo-600 bg-indigo-50 rounded-full hover:bg-indigo-100 transition">
-              <Mic size={20} />
-            </button>
-            <button className="flex items-center space-x-2 bg-indigo-600 px-6 py-2.5 rounded-full font-medium hover:bg-indigo-500 transition group">
-              <span>Send</span>
+
+          {/* Buttons Group */}
+          <div className="flex items-center justify-between w-full sm:w-auto space-x-2 px-2 pb-1.5 sm:pb-0">
+            <div className="flex items-center space-x-1 sm:space-x-2">
+              <button className="p-2 sm:p-2.5 text-indigo-600 bg-indigo-50 rounded-full hover:bg-indigo-100 transition active:scale-90">
+                <Upload size={18} className="sm:w-[20px]" />
+              </button>
+              <button className="p-2 sm:p-2.5 text-indigo-600 bg-indigo-50 rounded-full hover:bg-indigo-100 transition active:scale-90">
+                <Mic size={18} className="sm:w-[20px]" />
+              </button>
+            </div>
+
+            <button className="flex items-center justify-center space-x-2 bg-indigo-600 px-4 sm:px-6 py-2.5 rounded-full font-medium text-white hover:bg-indigo-500 transition group active:scale-95 text-sm sm:text-base">
+              <span className="hidden xs:block">Send</span>
               <Send size={16} className="group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
@@ -177,9 +183,9 @@ const App = () => {
             initialSlide={1}
             loop={true}
             breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3, centeredSlides: false },
-              1280: { slidesPerView: 4, centeredSlides: false },
+              340: { slidesPerView: 2 },
+              624: { slidesPerView: 3, centeredSlides: false },
+              980: { slidesPerView: 4, centeredSlides: false },
             }}
             className="pb-12 overflow-visible!"
           >
@@ -187,7 +193,7 @@ const App = () => {
               <SwiperSlide key={index} className="h-auto">
                 {({ isActive }) => (
                   <div className={`
-                  h-full p-8 rounded-[40px] border transition-all duration-500 flex flex-col
+                  h-full p-8 rounded-[40px] border transition-all duration-500 flex flex-col w-[400px] mx-auto
                   ${plan.isPro ? 'bg-indigo-600 border-indigo-400' : 'bg-[#1a1d33] border-white/10'}
                   ${plan.highlighted && !plan.isPro ? 'ring-2 ring-indigo-500/50' : ''}
                   hover:scale-105 hover:z-10 hover:opacity-100 hover:shadow-2xl hover:shadow-indigo-500/20 scale-95 opacity-50'
